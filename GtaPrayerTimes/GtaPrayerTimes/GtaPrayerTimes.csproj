@@ -11,6 +11,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\welcome.jpg" />
+    <None Remove="welcome.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\welcome.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="welcome.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>

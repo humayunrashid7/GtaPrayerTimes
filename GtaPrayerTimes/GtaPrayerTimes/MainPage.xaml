@@ -1,24 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GtaPrayerTimes.MainPage">
+             xmlns:helpers="clr-namespace:GtaPrayerTimes.Helpers;assembly=GtaPrayerTimes"
+             x:Class="GtaPrayerTimes.MainPage"
+             BackgroundImageSource="{helpers:ImageResource GtaPrayerTimes.Assets.Images.welcome.jpg}">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <BoxView Color="Green" Grid.Row="0"></BoxView>
+            <BoxView Color="Blue" Grid.Row="1"></BoxView>
+            <BoxView Color="Orange" Grid.Row="2"></BoxView>
+            <BoxView Color="GreenYellow" Grid.Row="3"></BoxView>
+            <BoxView Color="DarkOrchid" Grid.Row="4"></BoxView>
+            <BoxView Color="Navy" Grid.Row="5"></BoxView>
+            <BoxView Color="Red" Grid.Row="6"></BoxView>
+        </Grid>
     </StackLayout>
 
 </ContentPage>
